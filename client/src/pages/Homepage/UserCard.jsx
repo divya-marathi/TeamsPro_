@@ -6,12 +6,11 @@ export const Card = ({ item,  ErraseData,...style }) => {
 
   const [user, setUser] = useState("");
 
-  //delete user
-  
+  //delete user  
      const handleDelete =  async(userId) => {     
     try {
      
-      await axios.post(`http://localhost:5000/api/users/${userId}`);      
+      await axios.post(`https://user-db-apb2.onrender.com/api/users/${userId}`);      
      alert("user deleted")
       ErraseData(userId)
     } catch (error) {

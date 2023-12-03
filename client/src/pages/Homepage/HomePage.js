@@ -10,7 +10,7 @@ function HomePage() {
 
   
   async function GetAllUsers() {
-    await axios.get("http://localhost:5000/api/users").then((response) => {
+    await axios.get("https://user-db-apb2.onrender.com/api/users").then((response) => {
       setData(response.data);
       console.log(response.data);
     });
