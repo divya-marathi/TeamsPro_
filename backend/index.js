@@ -3,6 +3,7 @@ const { MongoDBConnection } = require("./MongoDBConnection")
 require('dotenv').config()
 const cors = require('cors')
 const { userRouter } = require("./router/userRouter")
+const { teamRouter } = require("./router/teamRouter")
 
 const app = express()
 const PORT = process.env.PORT
@@ -14,6 +15,7 @@ app.use(express.json())
 
 //routes
 app.use('/',userRouter)
+app.use('/',teamRouter)
 
 MongoDBConnection()
 

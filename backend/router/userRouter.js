@@ -6,12 +6,15 @@ const { CreateUser, UpdateUser, DeleteUser, getUserBySearchWithName} = require("
 
 const userRouter = express.Router()
 
-userRouter.get("/", StoreUsersData)
-userRouter.get('/api/users',GetAllUsers)
+// userRouter.get("/", StoreUsersData)
+
+userRouter.post('/api/users',GetAllUsers)
 userRouter.get('/api/users/:id',GetSpecificUser)
 userRouter.post('/api/users',CreateUser)
 userRouter.put('/api/users/:id',UpdateUser)
 userRouter.post('/api/users/:id',DeleteUser)
+
+
 
 //Search
 userRouter.post("/search", getUserBySearchWithName)

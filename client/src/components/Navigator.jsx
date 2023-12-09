@@ -48,8 +48,12 @@ const Dispatch = useDispatch()
               onChange={handleSearch}
             />
           </div>
+
         </form>
-        <Link to="/" className="text-gray-300 rounded-md flex  p-1 px-2 border border-slate-300">
+        <Link to="/team" className="text-yellow-300 flex  p-1 px-2 border hover:border-yellow-300">
+          Teams
+        </Link>
+        <Link to="/" className="text-yellow-300 flex  p-1 px-2 border hover:border-yellow-300">
           Home
         </Link>
       </div>
