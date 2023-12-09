@@ -19,7 +19,7 @@ function HomePage() {
 
   async function GetAllUsers() {
     await axios
-      .post("http://localhost:5000/api/users", { currentPage })
+      .post("https://user-db-apb2.onrender.com/api/users", { currentPage })
       .then((response) => {
         setData(response.data);
         console.log(response.data);
@@ -74,7 +74,7 @@ function HomePage() {
   //team creation
   const handleSubmit = async (e)=>{
     e.preventDefault()
-     await axios.post('http://localhost:5000/api/team',{teamName})
+     await axios.post('https://user-db-apb2.onrender.com/api/team',{teamName})
        .then((response)=>{
         if(response.status === 401){
           setTeamExist(true)

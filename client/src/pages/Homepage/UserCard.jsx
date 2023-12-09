@@ -11,7 +11,7 @@ export const Card = ({ item, ErraseData, ...style }) => {
 
 
   const teamDisplay = async () => {
-    await axios.get("http://localhost:5000/api/team").then((response) => {
+    await axios.get("https://user-db-apb2.onrender.com/api/team").then((response) => {
       setTeamData(response.data);
     });
   };
@@ -43,7 +43,7 @@ export const Card = ({ item, ErraseData, ...style }) => {
 
   const handleAddUser=async()=>{
     try {
-      const response = await axios.post('http://localhost:5000/api/teamMember', {
+      const response = await axios.post('https://user-db-apb2.onrender.com/api/teamMember', {
         teamMember: user._id,
         teamName: selectedTeam
       });

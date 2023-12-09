@@ -5,7 +5,7 @@ function TeamView() {
   const [teamData, setTeamData] = useState([]);
 
   const teamDisplay = async () => {
-    await axios.get("http://localhost:5000/api/team").then((response) => {
+    await axios.get("https://user-db-apb2.onrender.com/api/team").then((response) => {
       setTeamData(response.data);
     });
   };
